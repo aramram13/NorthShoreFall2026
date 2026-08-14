@@ -42,8 +42,13 @@
             gap: 1rem; margin-bottom: 1.5rem;
         }
         .media-item {
-            width: 100%; height: 250px; object-fit: cover; border-radius: 0.5rem; border: 1px solid #dddddd;
-            background-color: #000;
+            width: 100%; 
+            height: auto; /* Allows the image/video to scale naturally */
+            max-height: 400px; /* Prevents tall portrait photos from taking over the entire phone screen */
+            object-fit: contain; /* Forces the browser to show the entire file without cropping */
+            border-radius: 0.5rem; 
+            border: 1px solid #dddddd;
+            background-color: #000; /* Adds clean black letterboxing if the aspect ratio doesn't match perfectly */
         }
         .info-text { line-height: 1.6; margin-bottom: 1rem; }
         .tag-container { margin-bottom: 1rem; }
