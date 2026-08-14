@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Shore Fall 2026</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            font-size: 16px; color: #333333; background-color: #f4f7f6; padding: 2rem; 
+        }
+        .header { 
+            text-align: center; margin-bottom: 2rem; padding: 2.5rem; 
+            background-color: #2c4c3b; color: #ffffff; border-radius: 0.5rem; 
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: bold; }
+        .header p { font-size: 1.1rem; font-style: italic; opacity: 0.9; margin-top: 0.5rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .map-container {
+            width: 100%; height: 400px; margin-bottom: 2rem; border-radius: 0.5rem;
+            overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #e0e0e0;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+        details {
+            background: #ffffff; border-radius: 0.5rem; margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden;
+        }
+        summary {
+            padding: 1.5rem; font-size: 1.3rem; font-weight: bold; background-color: #ffffff;
+            color: #2c4c3b; cursor: pointer; list-style: none; display: flex;
+            justify-content: space-between; align-items: center; border-left: 5px solid #2c4c3b;
+            transition: background-color 0.2s ease;
+        }
+        summary:hover { background-color: #f0f4f1; }
+        summary::after { content: '▼'; font-size: 1rem; color: #4a6353; transition: transform 0.3s ease; }
+        details[open] summary::after { transform: rotate(180deg); }
+        summary::-webkit-details-marker { display: none; }
+        .card-content { padding: 1.5rem; border-top: 1px solid #eeeeee; }
+        .media-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem; margin-bottom: 1.5rem;
+        }
+        .media-item {
+            width: 100%; height: 250px; object-fit: cover; border-radius: 0.5rem; border: 1px solid #dddddd;
+            background-color: #000;
+        }
+        .info-text { line-height: 1.6; margin-bottom: 1rem; }
+        .tag-container { margin-bottom: 1rem; }
+        .tag { 
+            display: inline-block; padding: 0.25rem 0.6rem; border-radius: 15px; 
+            font-size: 0.8rem; font-weight: bold; margin-right: 0.3rem; margin-bottom: 0.3rem;
+        }
+        .drive-up { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .hike { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+        .dog-friendly { background-color: #cce5ff; color: #004085; border: 1px solid #b8daff; }
+        .label { font-weight: bold; color: #555555; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>North Shore Fall 2026</h1>
+    <p>October 9-11th • Duluth to Grand Portage</p>
+</div>
+
+<div class="container">
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1lejM7clBkl_vPm4sQg8G5M4bLOZMoTo&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+
+    <details>
+        <summary>Amnicon Falls State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Short Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Amnicon Falls State Park 1.MP4"></video>
+                <video class="media-item" controls muted><source src="media/Amnicon Falls State Park 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Beautiful waterfalls and rapids tumbling over ancient rock formations.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, flat, and under 1 mile.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Excellent. The flat terrain around the falls is very easy on senior joints.</p>
+            <p class="info-text"><span class="label">Price:</span> $11/day WI Park fee.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Big Manitou Falls at Pattison State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Short Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Big Manitou Falls at Pattison State Park 1.MP4"></video>
+                <img class="media-item" src="media/Big Manitou Falls at Pattison State Park 2.jpg" alt="Big Manitou Falls">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Wisconsin's highest waterfall, plunging 165 feet into a spectacular gorge.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, short paved walk to the main overlook.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Very accessible with smooth, paved paths.</p>
+            <p class="info-text"><span class="label">Price:</span> $11/day WI Park fee.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Ely’s Peak</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag hike">Strenuous Hike</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Ely's Peak 1.JPG" alt="Ely's Peak">
+                <img class="media-item" src="media/Ely's Peak 2.JPG" alt="Ely's Peak View">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A rugged peak offering panoramic views of Duluth and the St. Louis River valley.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Difficult, featuring steep rock scrambles.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Too difficult for a senior dog to hike.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Bardon Peak Overlook</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Overlook</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Bardon Peak Overlook 1.jpg" alt="Bardon Peak">
+                <video class="media-item" controls muted><source src="media/Bardon Peak Overlook 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Drive right up to the Bardon Peak Overlook along Skyline Parkway for panoramic views.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Scenic drive (no hiking required).</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Perfect. Blue can enjoy the view from the car.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Spirit Mountain</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Access</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Spirit Mountain 1.JPG" alt="Spirit Mountain">
+                <img class="media-item" src="media/Spirit Mountain 2.JPG" alt="Spirit Mountain View">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A major recreation area with excellent elevated views of the harbor and lake.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right up to the Grand Avenue Chalet or pull off along Skyline Parkway.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Great! Flat areas around the chalet are easy to walk.</p>
+            <p class="info-text"><span class="label">Price:</span> Varies by activity.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Brewer Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag hike">Uneven Path</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Brewer Park 1.JPG" alt="Brewer Park">
+                <img class="media-item" src="media/Brewer Park 2.JPG" alt="Brewer Park View">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A wooded city park featuring sections of the Duluth Traverse trail system.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Moderate, uneven dirt paths.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Okay for a slow sniff-walk on flat sections, watch for mountain bikes.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Enger Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Access</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Enger Park 1.jpg" alt="Enger Park">
+                <img class="media-item" src="media/Enger Park 2.jpg" alt="Enger Park">
+                <video class="media-item" controls muted><source src="media/Enger Park 3.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Beautiful manicured gardens centered around a 5-story stone observation tower.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right up. Mostly paved and flat paths.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Perfect. Lots of soft grass and level ground.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Great Lakes Aquarium</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Indoor Accessible</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Great Lakes Aquarium 1.jpg" alt="Aquarium">
+                <video class="media-item" controls muted><source src="media/Great Lakes Aquarium 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Interactive exhibits highlighting the freshwater habitats of the Great Lakes.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Fully accessible indoors.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> No dogs allowed inside (service animals only).</p>
+            <p class="info-text"><span class="label">Price:</span> ~$20/adult.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Harbor 360 Restaurant</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Dining</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Harbor 360 Restaurant.JPG" alt="Harbor 360">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Waterfront dining spot offering fantastic elevated views of the harbor.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> N/A.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> No dogs allowed indoors.</p>
+            <p class="info-text"><span class="label">Price:</span> $20-$40 per person.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Canal Park Brewing Company</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Dining</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Canal Park Brewing Company.JPG" alt="Canal Park Brewing">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Industrial-chic lakeside brewpub featuring a locally inspired menu.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> N/A.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> The outdoor patio is famously dog-friendly (dress warmly).</p>
+            <p class="info-text"><span class="label">Price:</span> $15-$30 per person.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Leif Erikson Park and Duluth Rose Gardens</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Leif Erickson Park and Duluth Rose Gardens 1.jpg" alt="Leif Erikson Park">
+                <img class="media-item" src="media/Leif Erickson Park and Duluth Rose Gardens 2.jpg" alt="Duluth Rose Gardens">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A beautiful lakeside park connecting to the Lakewalk with classic stone structures.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, flat, and paved.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Excellent, with plenty of benches for resting.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Glensheen Mansion</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Glensheen Mansion.JPG" alt="Glensheen">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A historic 39-room Jacobean estate situated on the shores of Lake Superior.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy walking on the estate grounds.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Service dogs only on the grounds and tours.</p>
+            <p class="info-text"><span class="label">Price:</span> $20+ per person.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Minnesota Point Beach</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Short Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Minnesota Point Beach.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A long, sandy beach located on the world's longest freshwater sandbar.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Flat sandy walking right from the parking area.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Great! Soft sand is gentle on older paws.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Hawk Ridge Nature Reserve</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Overlook</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Hawk Ridge Nature Reserve.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A premier location on the hillside for viewing the fall raptor migration.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right up and view from the main overlook area.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Very accommodating. Blue can relax right by the car.</p>
+            <p class="info-text"><span class="label">Price:</span> Free (donations accepted).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Kitchi Gammi Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Access</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Kitchi Gammi Park.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Also known as Brighton Beach, featuring a classic North Shore rocky shoreline.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right along the shore with easy access points.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Good, though the rocky beach itself might be uneven.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Betty’s Pies</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Dining</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Betty's Pies 1.JPG" alt="Betty's Pies">
+                <img class="media-item" src="media/Betty's Pies 2.JPG" alt="Betty's Pies">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A famous North Shore institution known for homestyle diner food and legendary pies.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> N/A.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> The outdoor patio is typically dog-friendly.</p>
+            <p class="info-text"><span class="label">Price:</span> Inexpensive to Moderate.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Silver Creek Cliff Tunnel Trail</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Silver Creek Cliff Tunnel Trail 1.jpg" alt="Silver Creek">
+                <img class="media-item" src="media/Silver Creek Cliff Tunnel Trail 2.jpg" alt="Silver Creek Tunnel">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A paved segment of the Gitchi-Gami trail wrapping around the outside of the highway tunnel.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, paved, 1-mile round trip.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Very easy for an older dog to navigate.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Gooseberry Falls State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Gooseberry Falls State Park 1.MP4"></video>
+                <img class="media-item" src="media/Gooseberry Falls State Park 2.jpg" alt="Gooseberry Falls">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Spectacular, highly accessible tiered waterfalls that are a must-see.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, paved paths a short distance from the parking lot.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Highly recommended; very accessible and smooth.</p>
+            <p class="info-text"><span class="label">Price:</span> Free at visitor center.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Split Rock Lighthouse State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Split Rock Lighthouse State Park 1.MP4"></video>
+                <video class="media-item" controls muted><source src="media/Split Rock Lighthouse State Park 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> The iconic Minnesota lighthouse perched on a dramatic 130-foot cliff.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Paved but hilly trails.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Allowed in the park, but not in the historic buildings.</p>
+            <p class="info-text"><span class="label">Price:</span> MN State Park fee.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Palisade Head</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Overlook</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Palisade Head 1.jpg" alt="Palisade Head">
+                <video class="media-item" controls muted><source src="media/Palisade Head 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Towering volcanic cliffs plunging directly into Lake Superior.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right to the top parking lot! No hike required.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Perfect for older dogs, but keep on a tight leash near edges.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Tettegouche State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Short Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Tettegouche State Park 1.jpg" alt="Tettegouche">
+                <video class="media-item" controls muted><source src="media/Tettegouche State Park 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Dramatic coastlines and the roaring Baptism River.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Stick to the flat visitor center area and the short path to the river mouth.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Good if you avoid the steep stairs on the outer trails.</p>
+            <p class="info-text"><span class="label">Price:</span> MN State Park fee.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Illgen Falls</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag hike">Short Hike</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Illgen Falls 1.MP4"></video>
+                <video class="media-item" controls muted><source src="media/Illgen Falls 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A beautiful, lesser-known 40-foot waterfall located just off the highway.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Moderate, 0.5-mile dirt path.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Doable if taken slowly, but watch for tree roots.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Caribou Falls State Wayside</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag hike">Stairs</span></div>
+            <div class="media-grid">
+                <video class="media-item" controls muted><source src="media/Caribou Falls State Wayside 1.MP4"></video>
+                <img class="media-item" src="media/Caribou Falls State Wayside 2.jpg" alt="Caribou Falls">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A scenic river hike ending in a beautiful waterfall.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Moderate, ends with a large set of wooden stairs.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> The stairs might be too tough for a 12-year-old dog.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Britton Peak</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Access</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/BrittonPeak.JPG" alt="Britton Peak">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> While the peak hike is steep, the parking lot area itself offers beautiful foliage views.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Enjoy the views straight from the lot.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Easy if you skip the steep climb.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Oberg Mountain</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag hike">Hike</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Oberg Mountain 1.jpg" alt="Oberg Mountain">
+                <video class="media-item" controls muted><source src="media/Oberg Mountain 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Famous loop trail offering sweeping panoramic views of the fall colors.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Moderate, 2.2-mile loop with a steady incline.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Pushing limits, but doable if taken at a very slow pace.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Cascade Falls</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Short Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Cascade Falls.JPG" alt="Cascade Falls">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> A beautiful series of cascading waterfalls along the Cascade River.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy to moderate near the highway.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Good accessible options if you stick to the lower trails.</p>
+            <p class="info-text"><span class="label">Price:</span> MN State Park fee.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Pincushion Mountain Overlook</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Overlook</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Pincushion Mountain Overlook 1.jpg" alt="Pincushion Mountain">
+                <img class="media-item" src="media/Pincushion Mountain Overlook 2.jpg" alt="Pincushion Mountain Overlook">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> You don't need to hike the mountain! There is a stunning scenic overlook directly at the parking lot with 180° views of Lake Superior.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right up.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Absolutely perfect. Views without the steps.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Mount Josephine Overlook</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Drive-Up Overlook</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Mount Josephine Overlook 1.jpg" alt="Mount Josephine">
+                <img class="media-item" src="media/Mount Josephine Overlook 2.jpg" alt="Mount Josephine Overlook">
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Instead of the grueling hike, stop at the highway wayside rest overlook for beautiful views of the Sussex Islands.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Drive right up.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Extremely easy.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Grand Portage State Park</summary>
+        <div class="card-content">
+            <div class="tag-container"><span class="tag drive-up">Paved Walk</span><span class="tag dog-friendly">Dog Friendly</span></div>
+            <div class="media-grid">
+                <img class="media-item" src="media/Grand Portage State Park 1.jpg" alt="Grand Portage">
+                <video class="media-item" controls muted><source src="media/Grand Portage State Park 2.MP4"></video>
+            </div>
+            <p class="info-text"><span class="label">Description:</span> Home to High Falls, Minnesota's tallest waterfall, located right on the Canadian border.</p>
+            <p class="info-text"><span class="label">Trail Info:</span> Easy, 1-mile round trip on a flat paved/boardwalk path.</p>
+            <p class="info-text"><span class="label">Blue’s Comfort:</span> Flawless. The flat boardwalk is ideal for senior dogs.</p>
+            <p class="info-text"><span class="label">Price:</span> Free.</p>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>
